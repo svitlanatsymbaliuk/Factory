@@ -1,6 +1,6 @@
-package factory.employee;
+package factory.employe;
 
-public interface Employee {
+public interface Employe {
 
 	void setDateOfBirth(String dateOfBirth);
 

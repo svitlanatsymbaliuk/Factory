@@ -4,32 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-import factory.employee.Employee;
-import factory.employee.Employee.Genger;
+import factory.employe.Employe;
+import factory.employe.Employe.Genger;
 
 public class MonthReport implements Report {
 
-	private List<Employee> employeeList;
+	private List<Employe> employeeList;
 	private Vector<String> homeAddressViolatorsArray;
 	private int womanCount;
 	private double allEmployeesSalary;
 
 	public MonthReport() {
-		employeeList = new ArrayList<Employee>();
+		employeeList = new ArrayList<Employe>();
 		homeAddressViolatorsArray = new Vector<String>();
 		womanCount = 0;
 		allEmployeesSalary = 0;
 	}
 
 	@Override
-	public void addEmployeeToReportList(Employee employee) {
+	public void addEmployeeToReportList(Employe employee) {
 		employeeList.add(employee);
 	}
 
 	@Override
 	public String getHomeAddressViolators() {
 		for (int i = 0; i < employeeList.size(); ++i) {
-			Employee employee = employeeList.get(i);
+			Employe employee = employeeList.get(i);
 			if ((employee.getDrunkTimesCountPerMonth() > 0)
 					|| (employee.getLateTimesCountPerMonth() > 0)) {
 				homeAddressViolatorsArray.add(employee.getHomeAddress());

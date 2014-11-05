@@ -1,6 +1,6 @@
-package factory.employee;
+package factory.employe;
 
-public class EmployeeImpl implements Employee {
+public class EmployeImpl implements Employe {
 
 	private String dateOfBirth;
 	private HomeAddress homeAddress;
@@ -15,7 +15,7 @@ public class EmployeeImpl implements Employee {
 	private double salaryPerDetail;
 	private double salaryPerMonth;
 	
-	public EmployeeImpl(Position position) {
+	public EmployeImpl(Position position) {
 		this.position = position;
 	}
 

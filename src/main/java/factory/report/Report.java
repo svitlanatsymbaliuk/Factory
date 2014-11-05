@@ -1,10 +1,10 @@
 package factory.report;
 
-import factory.employee.Employee;
+import factory.employe.Employe;
 
 public interface Report {
 
-	void addEmployeeToReportList(Employee employee);
+	void addEmployeeToReportList(Employe employee);
 	
 	int getWomanCountForGreetings();
 
