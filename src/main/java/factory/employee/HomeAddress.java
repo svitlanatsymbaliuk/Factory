@@ -1,4 +1,4 @@
-package factory.employee.data;
+package factory.employee;
 
 public final class HomeAddress {
 
@@ -22,6 +22,12 @@ public final class HomeAddress {
 
 	public int getHouseNumber() {
 		return houseNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "HomeAddress [town=" + town + ", street=" + street
+				+ ", houseNumber=" + houseNumber + "]";
 	}
 
 }
