@@ -1,4 +1,4 @@
-package factory.employe;
+package factory.employee;
 
 public final class HomeAddress {
 

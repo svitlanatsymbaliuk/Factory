@@ -1,9 +1,9 @@
 package factory.client;
 
-import factory.employe.Employe;
-import factory.employe.EmployeFactory;
-import factory.employe.Employe.Genger;
-import factory.employe.Employe.Position;
+import factory.employee.Employee;
+import factory.employee.EmployeeFactory;
+import factory.employee.Employee.Genger;
+import factory.employee.Employee.Position;
 import factory.report.Report;
 import factory.report.ReportFactory;
 import factory.report.Report.ReportType;
@@ -12,7 +12,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		
-		Employe director = EmployeFactory.getInstance(Position.DIRECTOR); 
+		Employee director = EmployeeFactory.getInstance(Position.DIRECTOR); 
 		director.setDateOfBirth("01/02/1982");
 		director.setHomeAddress("Kyiv", "Lomoosova", 1);
 		director.setGender(Genger.MALE);
@@ -20,7 +20,7 @@ public class Client {
 		director.setSalaryPerHour(300);
 		director.setWorkingTimeHoursPerMonth(200);
 		
-		Employe counter = EmployeFactory.getInstance(Position.COUNTER);
+		Employee counter = EmployeeFactory.getInstance(Position.COUNTER);
 		counter.setDateOfBirth("03/06/1987");
 		counter.setHomeAddress("Kyiv", "Vasylkivska", 2);
 		counter.setGender(Genger.FEMALE);
@@ -28,7 +28,7 @@ public class Client {
 		counter.setWorkingTimeHoursPerMonth(180);
 		counter.setLateTimesCountPerMonth(3);
 		
-		Employe headOfProduction = EmployeFactory.getInstance(Position.HEAD_OF_PRODUCTION);
+		Employee headOfProduction = EmployeeFactory.getInstance(Position.HEAD_OF_PRODUCTION);
 		headOfProduction.setDateOfBirth("04/10/1988");
 		headOfProduction.setHomeAddress("Kyiv", "Saksahanskoho", 3);
 		headOfProduction.setGender(Genger.FEMALE);
@@ -36,7 +36,7 @@ public class Client {
 		headOfProduction.setWorkingTimeHoursPerMonth(180);
 		headOfProduction.setLateTimesCountPerMonth(3);
 		
-		Employe worker1 = EmployeFactory.getInstance(Position.WORKER);
+		Employee worker1 = EmployeeFactory.getInstance(Position.WORKER);
 		worker1.setDateOfBirth("15/08/1981");
 		worker1.setHomeAddress("Kyiv", "Horkoho", 4);
 		worker1.setGender(Genger.MALE);
@@ -44,7 +44,7 @@ public class Client {
 		worker1.setDetailsCountPerMonth(100);
 		worker1.setDrunkTimesCountPerMonth(2);
 		
-		Employe worker2 = EmployeFactory.getInstance(Position.WORKER);
+		Employee worker2 = EmployeeFactory.getInstance(Position.WORKER);
 		worker2.setDateOfBirth("19128/1985");
 		worker2.setHomeAddress("Kyiv", "Korolenkivska", 5);
 		worker2.setGender(Genger.MALE);

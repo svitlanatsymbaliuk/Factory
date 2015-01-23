@@ -69,7 +69,7 @@ public class Client {
 				+ monthlyReport.getHomeAddressViolators(factoryEmployees
 						.getEmployeesList()));
 
-		System.out.println("Salary all employees"
+		System.out.println("Salary all employees "
 				+ monthlyReport.getSalaryAllEmployees(
 						factoryEmployees.getEmployeesList(), salaryInfo));
 	}
