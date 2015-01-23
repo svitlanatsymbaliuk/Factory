@@ -1,18 +1,19 @@
 package factory.report;
 
-import factory.employe.Employe;
+import java.util.List;
+
+import factory.employees.SalaryInfo;
+import factory.employees.data.EmployeeData;
 
 public interface Report {
 
-	void addEmployeeToReportList(Employe employee);
-	
-	int getWomanCountForGreetings();
+	int getWomenCountForGreeting(List<EmployeeData> employeesList);
 
-	String getHomeAddressViolators();
+	String getHomeAddressViolators(List<EmployeeData> employeesList);
 
-	double getAllEmployeesSalary();
+	double getSalaryAllEmployees(List<EmployeeData> employeesList, SalaryInfo salaryInfo);
 
 	enum ReportType {
-		MONTH
+		MONTHLY
 	};
 }

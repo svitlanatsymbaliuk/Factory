@@ -1,16 +1,12 @@
 package factory.report;
 
-import factory.report.Report.ReportType;;
+import factory.report.Report.ReportType;
 
 public class ReportFactory {
-	
 	public static Report getInstance(ReportType reportType){
-		if(reportType == ReportType.MONTH){
-			return new MonthReport();
+		if(reportType.equals(ReportType.MONTHLY)){
+			return new MonthlyReport();
 		}
-		else {
-			throw new IllegalArgumentException("No such type of report");
-		}
+		throw new IllegalArgumentException("No such type of report");
 	}
-
 }
