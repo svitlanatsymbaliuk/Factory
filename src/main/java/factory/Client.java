@@ -9,8 +9,8 @@ import factory.employees.data.PersonalData;
 import factory.employees.data.PersonalData.Gender;
 import factory.employees.data.PersonalData.Position;
 import factory.report.Report;
-import factory.report.Report.ReportType;
 import factory.report.ReportFactory;
+import factory.report.ReportType;
 
 public class Client {
 
@@ -60,18 +60,17 @@ public class Client {
 		SalaryInfo salaryInfo = new SalaryInfo(50000, 200, 100, 100);
 
 		// Get monthly report
-		Report monthlyReport = ReportFactory.getInstance(ReportType.MONTHLY);
+		Report monthlyReport = ReportFactory.getInstance(ReportType.MONTHLY,
+				factoryEmployees.getEmployeesList(), salaryInfo);
+
 		System.out.println("Count of women "
-				+ monthlyReport.getWomenCountForGreeting(factoryEmployees
-						.getEmployeesList()));
+				+ monthlyReport.getWomenCountForGreeting());
 
 		System.out.println("Home address of Violators"
-				+ monthlyReport.getHomeAddressViolators(factoryEmployees
-						.getEmployeesList()));
+				+ monthlyReport.getHomeAddressViolators());
 
 		System.out.println("Salary all employees "
-				+ monthlyReport.getSalaryAllEmployees(
-						factoryEmployees.getEmployeesList(), salaryInfo));
-	}
+				+ monthlyReport.getSalaryAllEmployees());
 
+	}
 }
