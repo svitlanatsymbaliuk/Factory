@@ -62,7 +62,7 @@ public class Client {
 		// Get monthly report
 		Report monthlyReport = ReportFactory.getInstance(ReportType.MONTHLY,
 				factoryEmployees.getEmployeesList(), salaryInfo);
-
+		
 		System.out.println("Count of women "
 				+ monthlyReport.getWomenCountForGreeting());
 
@@ -71,6 +71,5 @@ public class Client {
 
 		System.out.println("Salary all employees "
 				+ monthlyReport.getSalaryAllEmployees());
-
 	}
 }
